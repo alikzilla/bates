@@ -19,6 +19,7 @@ body {
   background: #ffe4e1;
   position: relative;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .envelope-wrapper {
@@ -187,10 +188,23 @@ body {
   opacity: 1;
 }
 
+.dino {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 1s;
+}
+
+.dino.active {
+  opacity: 1;
+}
+
 .confetti-1 {
   top: 20px;
   left: 20px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="%23FFD700"/></svg>');
+  background-image: url("./assets/confetti.gif");
 }
 
 .confetti-2 {
@@ -202,21 +216,16 @@ body {
 .confetti-3 {
   bottom: 20px;
   left: 20px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="30" y="30" width="40" height="40" fill="%239B30FF" transform="rotate(45,50,50)"/></svg>');
+  animation: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="%239B30FF"/></svg>');
 }
 
 .confetti-4 {
-  bottom: 20px;
-  right: 20px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="15" fill="%2300FF7F"/></svg>');
-}
-
-.dino {
-  width: 100px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  animation: bounce 2s infinite;
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  right: -120px;
+  background-image: url("./assets/dino.png");
 }
 
 @keyframes bounce {
