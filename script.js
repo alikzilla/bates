@@ -11,8 +11,7 @@ document.getElementById("envelope").addEventListener("click", () => {
   invitationText.classList.add("hidden");
 
   // Play music
-  music.src =
-    "https://www.youtube.com/embed/vhVBWw6rId0?autoplay=1&loop=1&playlist=vhVBWw6rId0";
+  music.src = "music.mp3";
 
   // Show confetti
   setTimeout(() => {
