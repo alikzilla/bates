@@ -11,8 +11,13 @@ document.getElementById("envelope").addEventListener("click", () => {
   invitationText.classList.add("hidden");
 
   // Play music
-  document.getElementById("music").play();
-  
+  document
+    .getElementById("music")
+    .play()
+    .catch((e) => {
+      console.warn("Не удалось воспроизвести музыку:", e);
+    });
+
   // Show confetti
   setTimeout(() => {
     confettiElements.forEach((confetti) => {
